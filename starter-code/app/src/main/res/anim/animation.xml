@@ -2,10 +2,16 @@
     android:shareInterpolator="false"
     android:fillAfter="false" >
   <alpha
-      <!--TODO: finish fading animation-->
-      />
+      android:fromAlpha="0"
+      android:toAlpha="1"
+      android:duration="1000"/>
 
   <rotate
-  <!--TODO: finish rotating animation-->
-    />
+      android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+      android:pivotX="50%"
+      android:pivotY="50%"
+      android:fromDegrees="0"
+      android:toDegrees="360"
+      android:duration="1000" />
+
 </set>
