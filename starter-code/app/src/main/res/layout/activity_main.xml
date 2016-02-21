@@ -8,7 +8,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:animateLayoutChanges="true"
     tools:context="generalassembly.yuliyakaleda.startercode.MainActivity">
 
     <EditText
@@ -16,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:maxLines="1"
         android:hint="What do you wish for?"/>
 
     <Button
@@ -39,6 +39,7 @@
 
     <ListView
         android:id="@+id/listview_wishes"
+        android:animateLayoutChanges="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textview"
