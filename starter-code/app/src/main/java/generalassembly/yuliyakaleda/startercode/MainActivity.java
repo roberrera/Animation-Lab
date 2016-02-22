@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> mWishList;
     ArrayAdapter<String> mAdapter;
     Animation mAnimation;
+    RelativeLayout mLayout;
 
 
     @Override
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.listview_wishes);
         mButton = (Button) findViewById(R.id.button_add);
         mAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.animation);
+        mLayout = (RelativeLayout) findViewById(R.id.layout);
 
         mWishList = new ArrayList<>();
         mAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, mWishList);
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         // Give the listView an animated transition.
         LayoutTransition layout = new LayoutTransition();
         layout.enableTransitionType(LayoutTransition.CHANGING);
-        mListView.setLayoutTransition(layout);
+        mLayout.setLayoutTransition(layout);
 
         mAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
